@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import classes from "./Header.module.css"
 
 function Header() {
   return (
     <header>
-      <Link to="/home" className="logo">
+      <Link to="/home" className={"logo"}>
         Trivia<span>Quiz</span>
       </Link>
       <nav>

@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --sea-color: #2a9d8f;
+  --sea-color-light: #55b1a5;
+  --sea-color-dark: #227e72;
+  --blue-color-dark: #264653;
+}
+
 html,
 body {
   margin: 0;
@@ -32,4 +39,15 @@ body {
 
 .App {
     height: 100%;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 600;
+  color: #2a2a2a;
+  text-decoration: none;
+}
+
+.logo > span {
+  color: var(--sea-color);
 }

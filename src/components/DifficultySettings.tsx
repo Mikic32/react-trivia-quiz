@@ -6,10 +6,10 @@ import classes from "./Difficulty.module.css"
 const DifficultySettings: React.FC<{current: number ,onChange:(state: number) => void}> = (props) => {
 
   return (
-    <div className="difficulty-container">
+    <div className={classes["difficulty-container"]}>
             <Setting
               isActive={props.current === 0}
-              className={"smiley easy"}
+              className={classes.easy}
               title={"Easy"}
               onClick={() => {
                 props.onChange(0);
@@ -17,7 +17,7 @@ const DifficultySettings: React.FC<{current: number ,onChange:(state: number) =>
             />
             <Setting
               isActive={props.current === 1}
-              className={"smiley medium"}
+              className={classes.medium}
               title={"Medium"}
               onClick={() => {
                 props.onChange(1);
@@ -25,7 +25,7 @@ const DifficultySettings: React.FC<{current: number ,onChange:(state: number) =>
             />
             <Setting
               isActive={props.current === 2}
-              className={"smiley hard"}
+              className={classes.hard}
               title={"Hard"}
               onClick={() => {
                 props.onChange(2);

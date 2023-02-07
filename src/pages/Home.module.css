@@ -1,0 +1,153 @@
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  background-color: #e9c46a;
+}
+
+body {
+  animation: fadeInAnimation ease 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main {
+  height: calc(100% - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 80px;
+}
+
+nav > a,
+nav > a:visited,
+nav > a:active {
+  text-decoration: none;
+  color: #2a2a2a;
+  flex-grow: 1;
+  padding: 4px 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+nav > a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  max-width: 1024px;
+  padding: 0 48px;
+  gap: 48px;
+  margin-top: -80px;
+}
+
+.home-text-box h1 {
+  font-size: 52px;
+  line-height: 1.02;
+  margin-bottom: 24px;
+}
+
+.home-text-box p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.home-text-box {
+  flex-grow: 2;
+  color: var(--blue-color-dark);
+}
+
+.home-image {
+  background-image: url("../assets/History.jpg");
+  flex-grow: 1;
+  aspect-ratio: 2/3;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1000px rgba(42, 157, 143, 0.5);
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  header {
+    display: none;
+  }
+
+  main {
+    height: 100%;
+    width: 100%;
+  }
+
+  .wave2,
+  .wave {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* 0 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / */
+  .home-image {
+    display: none;
+  }
+
+  .home-text-box h1 {
+    font-size: 44px;
+    line-height: 1.02;
+    margin-bottom: 24px;
+  }
+
+  .home-text-box p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+
+  .home-text-box {
+    flex-grow: 1;
+    color: var(--blue-color-dark);
+    position: relative;
+    height: 100%;
+    padding: 48px 16px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 24px);
+    position: absolute;
+    bottom: 24px;
+    height: 66px;
+  }
+
+  .difficulty-setting:active {
+    transform: scale(1);
+  }
+}

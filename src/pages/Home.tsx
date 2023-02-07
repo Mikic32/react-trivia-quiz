@@ -1,14 +1,9 @@
 import React from "react";
-import { redirect, useNavigate } from "react-router-dom";
+import classes from "./Home.module.css"
+import {useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import Header from "../components/Header";
 import Wave from "../components/Wave";
-import "../styles/style.css";
-import "../styles/wave.css";
-
-
-
-
 
 function Home() {
 
@@ -22,8 +17,8 @@ function Home() {
     <React.Fragment>
       <Header />
       <main>
-        <div className="container">
-          <div className="home-text-box">
+        <div className={classes.container}>
+          <div className={classes["home-text-box"]}>
             <h1>Test your trivia expertise with this Quiz!</h1>
             <p>
               Put your knowledge to the test, select up to 4 topics for the quiz,
@@ -33,7 +28,7 @@ function Home() {
             </p>
             <Button onClick={onGetStarted} label="GET STARTED!" />
           </div>
-          <div className="home-image"></div>
+          <div className={classes["home-image"]}></div>
         </div>
         <Wave waveIndex={0} />
       </main>

@@ -1,3 +1,4 @@
+import classes from "./Difficulty.module.css";
 const Setting: React.FC<{
   isActive: boolean;
   title: string;
@@ -7,9 +8,11 @@ const Setting: React.FC<{
   return (
     <div
       onClick={props.onClick}
-      className={"difficulty-setting " + (props.isActive && "setting-active")}
+      className={`${classes["difficulty-setting"]} ${
+        props.isActive && classes["setting-active"]
+      }`}
     >
-      <figure className={props.className}></figure>
+      <figure className={`${classes.smiley} ${props.className}`}></figure>
       <span>{props.title}</span>
     </div>
   );

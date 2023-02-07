@@ -1,10 +1,10 @@
 import React, { useReducer, useState } from "react";
+import classes from "./Settings.module.css"
 import Wave from "../components/Wave";
 import Header from "../components/Header";
-import "../styles/style.css";
-import Topic from "../components/Topic";
 import Button from "../components/Button";
 import DifficultySettings from "../components/DifficultySettings";
+import Topics from "../components/Topics";
 
 function reducer(state: any, action: any) {
   return {
@@ -17,7 +17,7 @@ function reducer(state: any, action: any) {
 function Settings() {
   const [difficulty, setDifficulty] = useState(0);
 
-  const [state, dispatch] = useReducer(reducer, {
+  const [topicState, dispatchTopics] = useReducer(reducer, {
     categories: [
       { isActive: false, value: "Music" },
       { isActive: false, value: "History" },
@@ -27,31 +27,20 @@ function Settings() {
   });
 
   console.log(
-    state.categories
+    topicState.categories
       .filter((c: any) => c.isActive)
       .map((c: any) => c.value.toLowerCase())
       .toString()
   );
   const onPlayBtn = () => {};
-  console.log(state);
+  console.log(topicState);
   return (
     <React.Fragment>
       <Header />
       <main>
-        <div className="card">
+        <div className={classes.card}>
           <h2>Please select your topics*</h2>
-          <div className="topics-container">
-            {state.categories.map((c: any) => (
-              <Topic
-                onClick={() => {
-                  dispatch({ type: c.value });
-                }}
-                isActive={c.isActive}
-                title={c.value}
-                key={c.value}
-              />
-            ))}
-          </div>
+          <Topics topics={topicState} dispatch={dispatchTopics} />
           <h2>Select difficulty level</h2>
           <DifficultySettings current={difficulty} onChange={setDifficulty} />
           <Button onClick={onPlayBtn} large label="Play!" />

@@ -1,10 +1,11 @@
 import React from "react";
+import classes from "./Topic.module.css";
 import useToggle from "../hooks/useToggle";
 
-function Topic(props: any) {
+const Topic: React.FC<{isActive: boolean, onClick: () => void, title: string}> = (props) => {
   return (
     <div
-      className={"topic " + (props.isActive && "topic-checked")}
+      className={`${classes.topic} ${props.isActive && classes["topic-checked"]}`}
       onClick={props.onClick}
     >
       {props.title}

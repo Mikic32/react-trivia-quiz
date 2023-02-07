@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/game.css"
+// import "../styles/game.css"
 import DUMMY_QUESTION from "../data/DummyResponse";
 import Question from "../components/Question";
 import Answer from "../components/Answer";

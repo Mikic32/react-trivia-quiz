@@ -40,3 +40,11 @@
   .wave2 .shape-fill {
     fill: #e76f51;
   }
+
+  @media only screen and (max-width: 768px) {
+    .wave2,
+    .wave {
+      display: none;
+    }
+  
+  }
