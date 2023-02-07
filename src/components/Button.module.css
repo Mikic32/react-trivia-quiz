@@ -1,0 +1,35 @@
+.btn:visited,
+.btn {
+  background-color: var(--sea-color);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 12px;
+  font-size: 24px;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.15);
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--sea-color-light);
+}
+
+.btn:active {
+  background-color: var(--sea-color-dark);
+}
+
+.btn-big {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 24px);
+    position: absolute;
+    bottom: 24px;
+    height: 66px;
+  }
+}
