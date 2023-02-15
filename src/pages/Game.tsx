@@ -67,27 +67,29 @@ const Game = () => {
     <p>Loading...</p>
   ) : !isGameOver ? (
     <GameContainer topic={questions[currentQuestionIndex].category}>
-      
-        <Question text={questions[currentQuestionIndex].question} />
-        <Timer onComplete={onTimeOut} resetTimer={currentQuestionIndex} />
-        <div className={classes["solutions-container"]}>
-          {currentAnswers.map((answer, index) => {
-            return (
-              <Answer
-                key={index}
-                letter={index}
-                value={answer}
-                correctAnswer={questions[currentQuestionIndex].correctAnswer}
-                selectedAnswer={selectedAnswer}
-                onSelect={onSelectedAnswer}
-              />
-            );
-          })}
-        </div>
+      <Question text={questions[currentQuestionIndex].question} />
+      <Timer onComplete={onTimeOut} resetTimer={currentQuestionIndex} />
+      <div className={classes["solutions-container"]}>
+        {currentAnswers.map((answer, index) => {
+          return (
+            <Answer
+              key={index}
+              letter={index}
+              value={answer}
+              correctAnswer={questions[currentQuestionIndex].correctAnswer}
+              selectedAnswer={selectedAnswer}
+              onSelect={onSelectedAnswer}
+            />
+          );
+        })}
+      </div>
     </GameContainer>
   ) : (
-    <GameContainer topic="score">
-      <ScoreCard score={score} difficulty={questions[currentQuestionIndex].difficulty} />
+    <GameContainer showScore={true} topic="score">
+      <ScoreCard
+        score={score}
+        difficulty={questions[currentQuestionIndex].difficulty}
+      />
     </GameContainer>
   );
 };
