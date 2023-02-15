@@ -1,0 +1,25 @@
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .text {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .value {
+    font-size: 86px;
+    color: #fff;
+  }
+  
+  /* .info {
+    max-width: 360px;
+    margin: 40px auto 0;
+    text-align: center;
+    font-size: 16px;
+  }
+   */

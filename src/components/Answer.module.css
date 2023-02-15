@@ -32,3 +32,10 @@
     background-color: #fa5252 !important;
     box-shadow: 0 0 50px 15px rgba(250, 82, 82, 0.5) !important;
   }
+
+  @media only screen and (max-width: 768px) {
+    .answer {
+      font-size: 20px;
+      min-height: 60px;
+    }
+  }

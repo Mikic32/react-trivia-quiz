@@ -1,0 +1,31 @@
+.question-container {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--accent-color);
+    border-radius: 25px;
+    box-shadow: 0 0 50px 15px var(--question-shadow);
+    background-color: #414141;
+    width: 100%;
+  }
+
+  .question-container > h1 {
+    color: #fff;
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    .question-container {
+      width: 100%;
+      min-width: 0;
+      padding: 16px;
+    }
+
+    .question-container > h1 {
+      font-size: 24px;
+    }
+
+  }

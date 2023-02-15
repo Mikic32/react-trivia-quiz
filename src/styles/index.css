@@ -41,13 +41,4 @@ body {
     height: 100%;
 }
 
-.logo {
-  font-size: 36px;
-  font-weight: 600;
-  color: #2a2a2a;
-  text-decoration: none;
-}
 
-.logo > span {
-  color: var(--sea-color);
-}

@@ -1,0 +1,68 @@
+.game-container {
+  height: 100%;
+  background-color: #264653;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: #2a2a2a;
+  border-radius: 25px;
+  aspect-ratio: 4/3;
+  width: 1024px;
+  padding: 24px;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Music {
+  background-image: url(../assets/music_big.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.History {
+  background-image: url(../assets/history_big.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.Science {
+  background-image: url(../assets/science_big.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.Geography {
+  background-image: url(../assets/geography_big.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.score {
+  background-image: url(../assets/score.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+    min-width: 0;
+    border-radius: 0;
+    height: 100%;
+    background-color: rgb(42, 42, 42, 0.9);
+  }
+}

@@ -3,6 +3,15 @@
     border-radius: 25px;
     padding: 24px;
     margin-top: -80px;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .wrapper {
+    height: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   
   .card h2 {

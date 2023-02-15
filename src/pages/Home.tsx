@@ -16,15 +16,15 @@ function Home() {
   return (
     <React.Fragment>
       <Header />
-      <main>
+      <main className={classes.wrapper}>
         <div className={classes.container}>
           <div className={classes["home-text-box"]}>
             <h1>Test your trivia expertise with this Quiz!</h1>
             <p>
-              Put your knowledge to the test, select up to 4 topics for the quiz,
-              the topics include Music, History, Geography and Science. Then
-              select the difficulty level. You will answer 5 multiple choice
-              questions based on the topics you selected.
+              Put your knowledge to the test, select up to <b>4 topics</b> for the quiz,
+              the topics include <b>Music</b>,<b> History</b>, <b>Geography</b> and <b>Science</b>. Then
+              select the difficulty level. You will answer <b>5 multiple choice
+              questions</b> based on the topics you selected.
             </p>
             <Button onClick={onGetStarted} label="GET STARTED!" />
           </div>
