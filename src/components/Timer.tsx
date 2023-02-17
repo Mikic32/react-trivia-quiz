@@ -13,13 +13,15 @@ const renderTime = ({ remainingTime }: any) => {
   );
 };
 
-const Timer: React.FC<{ resetTimer: number; onComplete: () => void }> = (
-  props
-) => {
+const Timer: React.FC<{
+  isRunning: string | null;
+  resetTimer: number;
+  onComplete: () => void;
+}> = (props) => {
   return (
     <CountdownCircleTimer
       key={props.resetTimer}
-      isPlaying
+      isPlaying={props.isRunning === null} //If answer is selected stop the timer
       duration={15}
       size={250}
       colors={["#ffffff", "#c92a2a"]}

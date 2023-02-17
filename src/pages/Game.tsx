@@ -68,7 +68,7 @@ const Game = () => {
   ) : !isGameOver ? (
     <GameContainer topic={questions[currentQuestionIndex].category}>
       <Question text={questions[currentQuestionIndex].question} />
-      <Timer onComplete={onTimeOut} resetTimer={currentQuestionIndex} />
+      <Timer isRunning={selectedAnswer} onComplete={onTimeOut} resetTimer={currentQuestionIndex} />
       <div className={classes["solutions-container"]}>
         {currentAnswers.map((answer, index) => {
           return (
@@ -85,12 +85,10 @@ const Game = () => {
       </div>
     </GameContainer>
   ) : (
-    <GameContainer showScore={true} topic="score">
       <ScoreCard
         score={score}
         difficulty={questions[currentQuestionIndex].difficulty}
       />
-    </GameContainer>
   );
 };
 

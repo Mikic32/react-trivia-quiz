@@ -48,6 +48,29 @@
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
 }
 
+.General {
+  background-image: url(../assets/general_big.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.Film {
+  background-image: url(../assets/film_big.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.Food {
+  background-image: url(../assets/food_big.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+
+
 .score {
   background-image: url(../assets/score.jpg);
   background-position: center;
@@ -63,6 +86,6 @@
     min-width: 0;
     border-radius: 0;
     height: 100%;
-    background-color: rgb(42, 42, 42, 0.9);
+    /* background-color: rgb(42, 42, 42, 0.9); */
   }
 }

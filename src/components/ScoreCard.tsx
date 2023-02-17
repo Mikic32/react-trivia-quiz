@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import GameContainer from "./GameContainer";
 
 import classes from "./ScoreCard.module.css";
 
@@ -8,31 +9,33 @@ const ScoreCard: React.FC<{ score: number; difficulty: string }> = (props) => {
   const onConfirm = () => {
     navigate("/settings");
   };
-  
+
   return (
-    <div className={classes["score-card"]}>
-      <h1>Well Done!</h1>
-      <div className={classes.quizInfo}>
-        <div className={`${classes.row} ${classes.overall}`}>
-          <span>
-            <h2>Overall Score:{`${props.score}/5`}</h2>
-          </span>
-          <span id={classes.overall}></span>
+    <GameContainer showScore={true} topic="score">
+      <div className={classes["score-card"]}>
+        <h1>Well Done!</h1>
+        <div className={classes.quizInfo}>
+          <div className={`${classes.row} ${classes.overall}`}>
+            <span>
+              <h2>Overall Score:{`${props.score}/5`}</h2>
+            </span>
+            <span id={classes.overall}></span>
+          </div>
+          <div className={classes.row}>
+            <span>Difficulty: {`${props.difficulty}`}</span>
+            <span id={classes.difficulty}></span>
+          </div>
+          <p>A better score display coming soon ;)</p>
         </div>
-        <div className={classes.row}>
-          <span>Difficulty: {`${props.difficulty}`}</span>
-          <span id={classes.difficulty}></span>
-        </div>
-        <p>A better score display coming soon ;)</p>
+        <button
+          onClick={onConfirm}
+          id={classes.confirm}
+          className={classes["btn-big"]}
+        >
+          Confirm
+        </button>
       </div>
-      <button
-        onClick={onConfirm}
-        id={classes.confirm}
-        className={classes["btn-big"]}
-      >
-        Confirm
-      </button>
-    </div>
+    </GameContainer>
   );
 };
 

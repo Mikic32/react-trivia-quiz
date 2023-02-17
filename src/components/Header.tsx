@@ -10,7 +10,7 @@ function Header() {
         Trivia<span>Quiz</span>
       </Link>
       <nav>
-        <a href="https://github.com/Mikic32/trivia-quiz">GitHub</a>
+        <a href="https://github.com/Mikic32/react-trivia-quiz">GitHub</a>
         <Link to="/about">About</Link>
       </nav>
     </header>

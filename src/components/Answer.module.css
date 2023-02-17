@@ -17,13 +17,13 @@
   }
   
   .answer:active {
-    background-color: 121212;
+    background-color: #343434;
     box-shadow: 0 0 50px 15px var(--answer-active-shadow);
   }
   
   .correct,
   .correct:hover {
-    background-color: #51cf66;
+    background-color: #51cf66 !important;
     box-shadow: 0 0 50px 15px rgba(81, 207, 102, 0.5);
   }
   
@@ -37,5 +37,9 @@
     .answer {
       font-size: 20px;
       min-height: 60px;
+    }
+
+    .answer:hover {
+      background-color: #414141;
     }
   }

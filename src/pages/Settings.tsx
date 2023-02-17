@@ -1,4 +1,4 @@
-import React, { useContext, useReducer, useState } from "react";
+import React, { useReducer, useState } from "react";
 import classes from "./Settings.module.css";
 import Wave from "../components/Wave";
 import Header from "../components/Header";
@@ -6,10 +6,16 @@ import Button from "../components/Button";
 import DifficultySettings from "../components/DifficultySettings";
 import Topics from "../components/Topics";
 import { useNavigate } from "react-router-dom";
+import CategoryObj from "../models/CategoryObj";
+import generateTopicString from "../helpers/generateTopicString";
+import difficultyToString from "../helpers/difficultyToString";
 
-function reducer(state: any, action: any) {
+function reducer(
+  state: { categories: CategoryObj[] },
+  action: { type: string }
+) {
   return {
-    categories: state.categories.map((c: any) =>
+    categories: state.categories.map((c: CategoryObj) =>
       c.value === action.type ? { ...c, isActive: !c.isActive } : c
     ),
   };
@@ -24,31 +30,17 @@ function Settings() {
       { isActive: false, value: "History" },
       { isActive: false, value: "Geography" },
       { isActive: false, value: "Science" },
+      { isActive: false, value: "Food & Drink" },
+      { isActive: false, value: "Film & TV" },
+      { isActive: false, value: "General Knowledge" },
     ],
   });
 
-  const difficultyToString = () => {
-    switch (difficulty) {
-      case 0:
-        return "easy";
-      case 1:
-        return "medium";
-      case 2:
-        return "hard";
-      default:
-        return "error";
-    }
-  };
-
   const onPlayBtn = () => {
-    const topicString = topicState.categories
-      .filter((c: any) => c.isActive)
-      .map((c: any) => c.value.toLowerCase())
-      .toString();
-
+    const topicString = generateTopicString(topicState)
     const params = {
       topicString: topicString,
-      difficultyString: difficultyToString(),
+      difficultyString: difficultyToString(difficulty),
     };
 
     window.localStorage.setItem("params", JSON.stringify(params));

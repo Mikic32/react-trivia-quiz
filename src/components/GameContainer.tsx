@@ -3,7 +3,7 @@ import classes from "./GameContainer.module.css"
 
 const GameContainer:React.FC<{children:ReactNode, topic:string, showScore?:boolean}> = (props) => {
   return (
-    <main className={`${classes["game-container"]} ${classes[props.topic]}`}>
+    <main className={`${classes["game-container"]} ${classes[props.topic.split(' ')[0]]}`}>
      {!props.showScore? <div className={classes.card}>
       {props.children}
       </div> : props.children} 
