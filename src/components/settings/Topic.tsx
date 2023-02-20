@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./Topic.module.css";
-import useToggle from "../hooks/useToggle";
 
 const Topic: React.FC<{isActive: boolean, onClick: () => void, title: string}> = (props) => {
   return (

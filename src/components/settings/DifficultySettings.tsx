@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import useToggle from "../hooks/useToggle";
 import Setting from "./Setting";
 import classes from "./Difficulty.module.css"
 

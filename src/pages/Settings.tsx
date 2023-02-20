@@ -1,14 +1,13 @@
 import React, { useReducer, useState } from "react";
 import classes from "./Settings.module.css";
-import Wave from "../components/Wave";
-import Header from "../components/Header";
-import Button from "../components/Button";
-import DifficultySettings from "../components/DifficultySettings";
-import Topics from "../components/Topics";
+import Header from "../components/UI/Header";
+import Button from "../components/UI/Button";
 import { useNavigate } from "react-router-dom";
 import CategoryObj from "../models/CategoryObj";
 import generateTopicString from "../helpers/generateTopicString";
 import difficultyToString from "../helpers/difficultyToString";
+import Topics from "../components/settings/Topics";
+import DifficultySettings from "../components/settings/DifficultySettings";
 
 function reducer(
   state: { categories: CategoryObj[] },
@@ -59,7 +58,7 @@ function Settings() {
           <DifficultySettings current={difficulty} onChange={setDifficulty} />
           <Button onClick={onPlayBtn} large label="Play!" />
         </div>
-        <Wave waveIndex={1} />
+        {/* <Wave waveIndex={1} /> */}
       </main>
     </React.Fragment>
   );

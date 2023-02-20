@@ -1,9 +1,8 @@
 import React from "react";
 import classes from "./Home.module.css"
 import {useNavigate } from "react-router-dom";
-import Button from "../components/Button";
-import Header from "../components/Header";
-import Wave from "../components/Wave";
+import Button from "../components/UI/Button";
+import Header from "../components/UI/Header";
 
 function Home() {
 
@@ -21,8 +20,8 @@ function Home() {
           <div className={classes["home-text-box"]}>
             <h1>Test your trivia expertise with this Quiz!</h1>
             <p>
-              Put your knowledge to the test, select up to <b>4 topics</b> for the quiz,
-              the topics include <b>Music</b>,<b> History</b>, <b>Geography</b> and <b>Science</b>. Then
+              Put your knowledge to the test, select up to <b>7 topics</b> for the quiz,
+              the topics include <b>Music</b>,<b> History</b>, <b>Geography</b> and <b>more</b>! Then
               select the difficulty level. You will answer <b>5 multiple choice
               questions</b> based on the topics you selected.
             </p>
@@ -30,7 +29,6 @@ function Home() {
           </div>
           <div className={classes["home-image"]}></div>
         </div>
-        <Wave waveIndex={0} />
       </main>
     </React.Fragment>
   );

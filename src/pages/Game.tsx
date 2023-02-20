@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import Answer from "../components/Answer";
 import classes from "./Game.module.css";
 import QuestionObj from "../models/QuestionObj";
-import Question from "../components/Question";
 import { useQuery } from "react-query";
-import ScoreCard from "../components/ScoreCard";
-import GameContainer from "../components/GameContainer";
-import Timer from "../components/Timer";
+import Timer from "../components/game/Timer";
 import fetchQuestions from "../api/fetchQuestions";
+import GameContainer from "../components/game/GameContainer";
+import Question from "../components/game/Question";
+import Answer from "../components/game/Answer";
+import ScoreCard from "../components/game/ScoreCard";
 
 const Game = () => {
   const [score, setScore] = useState(0);

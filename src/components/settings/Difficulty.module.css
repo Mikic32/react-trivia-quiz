@@ -37,15 +37,15 @@
 }
 
 .easy {
-  background-image: url(../assets/smiley-fill.svg);
+  background-image: url(../../assets/smiley-fill.svg);
 }
 
 .medium {
-  background-image: url(../assets/smiley-meh-fill.svg);
+  background-image: url(../../assets/smiley-meh-fill.svg);
 }
 
 .hard {
-  background-image: url(../assets/smiley-x-eyes-fill.svg);
+  background-image: url(../../assets/smiley-x-eyes-fill.svg);
 }
 
 @media only screen and (max-width: 768px) {
