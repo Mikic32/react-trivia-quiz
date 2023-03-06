@@ -6,7 +6,7 @@ import classes from "./Header.module.css"
 function Header() {
   return (
     <header className={classes["header-container"]}>
-      <Link to="/home" className={classes.logo}>
+      <Link to="/" className={classes.logo}>
         Trivia<span>Quiz</span>
       </Link>
       <nav>

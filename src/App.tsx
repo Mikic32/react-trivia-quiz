@@ -8,14 +8,15 @@ import Home from "./pages/Home";
 import Settings from "./pages/Settings";
 import { QueryClient, QueryClientProvider } from "react-query";
 import About from "./pages/About";
-const router = createBrowserRouter([
+const routes = [
   //TODO Use hash router!
-  { path: "/home", element: <Home /> },
   { path: "/settings", element: <Settings /> },
   { path: "/game", element: <Game /> },
   { path: "/about", element: <About /> },
-  { path: "*", element: <Navigate to="/home" replace={false} /> },
-]);
+  { path: "/", element: <Home /> },
+  { path: "*", element: <Navigate to="/" replace={false} /> },
+]
+const router = createBrowserRouter(routes, {basename: '/trivia-quiz'});
 
 const queryClient = new QueryClient();
 
